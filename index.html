@@ -29,11 +29,12 @@ a{color:var(--lk)}
 .doc .it{display:flex;gap:.8rem}.doc .it b{font-weight:600;color:var(--mu);min-width:2.4rem}
 .prov{font-size:.92rem}
 footer{text-align:center;color:var(--mu);font-size:.8rem;margin-top:2.5rem}
-footer a{color:var(--mu);margin:0 .4rem}footer a[href^=mailto]{color:var(--lk)}
+footer a{color:var(--mu);margin:0 .4rem}
+footer a[href$=".html"]{text-decoration:none}footer a[href^=mailto]{color:var(--lk)}
 .btn{color:var(--bt)!important}
 body [lang]{display:none}html[data-l=cs] body [lang=cs],html[data-l=en] body [lang=en]{display:block}
 html[data-l=cs] body span[lang=cs],html[data-l=en] body span[lang=en]{display:inline}
-ul.pts{margin:.6rem 0 0;padding-left:1.2rem}ul.pts li{margin:.4rem 0}ul.pts li::marker{color:var(--ac)}
+ul.pts{margin:.6rem 0 0;padding:0;list-style:none}ul.pts li{margin:.4rem 0;padding-left:1.3rem;position:relative}ul.pts li::before{content:"";position:absolute;left:.15rem;top:.62em;width:.5rem;height:.5rem;border-radius:50%;background:var(--ac)}
 </style></head><body><div class="w"><header><a class="b" href="index.html"><img src="logo.png" alt="">Receppod</a><div class="lg"><button data-l="cs">CZ</button><button data-l="en">EN</button></div></header>
 <div class="hero"><img src="logo.png" alt="Receppod">
 <h1 lang="cs">Receppod</h1><h1 lang="en">Receppod</h1>
