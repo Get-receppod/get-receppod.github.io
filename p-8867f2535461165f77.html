@@ -5,16 +5,21 @@
 <title>Receppod – přehled zákazníků</title>
 <style>
 :root{--bg:#faf3e1;--card:#fff;--tx:#1a1a1a;--mu:#6e6a62;--ln:#d9cfbd;--ac:#800020;--bt:#fff;--ok:#1d7a46;--wa:#b26a00;--er:#b3261e;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#14110d;--card:#26211b;--tx:#f3ede0;--mu:#b3a999;--ln:#3a332a;--ac:#990029;--bt:#fff;--ok:#5ac58a;--wa:#e0a24a;--er:#ff8a80;color-scheme:dark}}
+@media (prefers-color-scheme:dark){:root{--bg:#231e18;--card:#312a22;--tx:#f3ede0;--mu:#b9ae9e;--ln:#4a4034;--ac:#990029;--bt:#fff;--ok:#5ac58a;--wa:#e0a24a;--er:#ff8a80;color-scheme:dark}}
 *{box-sizing:border-box}
 html{background:var(--bg);font-size:clamp(16px,1.6vmin + 9px,24px)}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45;padding:calc(8px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right)) 2rem max(16px,env(safe-area-inset-left));min-height:100vh}
 h1{font-size:1.9rem;margin:0 0 .4rem;font-weight:600}
 .wrap{max-width:68rem;margin:0 auto}
 .sub{color:var(--mu);margin:0 0 1.2rem;line-height:1.45}
-.login{font-size:16px;max-width:22rem;margin:0 auto;min-height:calc(100dvh - 3rem);display:flex;flex-direction:column;justify-content:center}
-.login h1{font-size:1.9rem;margin:0 0 .4rem;font-weight:600}
-.login .b{padding:.9rem;font-size:1.05rem}
+.login{font-size:16px;max-width:22em;margin:0 auto;min-height:calc(100dvh - 3rem);display:flex;flex-direction:column;justify-content:center}
+.login form{background:var(--card);border:1.5px solid color-mix(in srgb,var(--tx) 28%,var(--bg));border-radius:1.25em;padding:1.3em 1.3em 1.4em}
+.login h1{font-size:1.5em;margin:0 0 .5em;font-weight:600}
+.login label{font-size:.8em;margin:.75em 0 .25em}
+.login form input{background:var(--bg);padding:.6em .85em;font-size:1em;border-radius:.75em}
+.login form .pwr input{padding-right:2.6em}
+.login .err{margin:.4em 0 0;min-height:1.1em}
+.login .b{margin-top:.8em;padding:.65em;font-size:1em;border-radius:.8em}
 label{display:block;font-size:.85rem;font-weight:600;color:var(--mu);margin:.8rem 0 .3rem}
 input[type=email],input[type=password],input[type=text],input[type=search]{width:100%;padding:.85rem;border:1px solid var(--ln);border-radius:.8rem;background:var(--card);color:var(--tx);font:inherit;font-size:1rem}
 .pwr{position:relative;display:block}.pwr input{padding-right:2.8rem}
