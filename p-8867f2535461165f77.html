@@ -97,7 +97,7 @@ async function load(){
     rows=await api("/rest/v1/prehled_zakazniku?select=*&order=registrace.desc&limit=5000");
     let orf=[];try{orf=await api("/rest/v1/predplatne_nepropojena?select=*&order=aktualizovano.desc&limit=500")}catch(e){}
     render();renderOrf(orf);
-    if(!rows.length)$("ae").textContent="Seznam je prázdný. Pokud už se někdo zaregistroval, nejste v seznamu správců (viz návod: krok se spravci).";
+    if(!rows.length)$("ae").textContent="Zatím tu nikdo není, nebo tento účet nemá k přehledu přístup.";
   }catch(e){
     $("ae").textContent=e.message=="auth"?"Platnost přihlášení vypršela nebo nemáte oprávnění. Přihlaste se znovu.":"Přehled se nepodařilo načíst. Zkontrolujte, že je v Supabase spuštěný soubor 01_tabulky.sql.";
   }
